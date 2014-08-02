@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Five Strikes Tab</string>
+    <string name="team_edit">Mannschaft einrichten</string>
+    <string name="player_edit">Spieler einrichten</string>
+    <string name="play_game">Spiel starten</string>
+    <string name="play_game_fast">Schnelles Spiel starten</string>
+    <string name="statistic">Statistik</string>
+    <string name="import_export">Import / Export</string>
+    <string name="okay">OK</string>
+    <string name="speichern">Speichern</string>
+    <string name="loeschen">Löschen</string>
+	<string name="tickerMSGBoxJa">Ja</string>
+	<string name="tickerMSGBoxNein">Nein</string>
+	<string name="player">Spieler</string>
+	<string name="teams">Mannschaften</string>
+	<string name="game">Spiel</string>
+	
+	<string name="spielerName">Spielername</string>
+	<string name="spielerNummer">Rückennummer</string>
+	<string name="spielerPosition">Position</string>
+	<string name="positionen_prompt">Position wählen</string>
+	<string-array name="positionen">
+        <item>Bitte auswählen</item>
+        <item>Torwart</item>
+        <item>Linksaußen</item>
+        <item>Rückraum links</item>
+        <item>Rückraum mitte</item>
+        <item>Rückraum rechts</item>
+        <item>Rechtsaußen</item>
+        <item>Kreisläufer</item>
+    </string-array>
+    <string name="spielerMsgboxTitel">Löschen</string>
+	<string name="spielerMsgboxText">Möchtest Du den Spieler wirklich löschen?</string>
+	<string name="spielerDelMsgboxTitel">Löschen nicht möglich</string>
+	<string name="spielerDelMsgboxText">Es existiert noch mindestens ein Spiel, in dem dieser Spieler noch aktiv ist. 
+	    								Löschen ist daher nicht möglich. Lösche das / die betreffenden Spiel(e) und 
+	    								versuche es erneut.</string>
+    
+    
+
+	<string name="statBezeichnungTore">Tore</string>
+    <string name="statBezeichnungTorEffektivitaet">Tor Effektivität</string>
+    <string name="statBezeichnung7mEffektivitaet">7m Effektivität</string>
+    <string name="statBezeichnungTGEffektivitaet">TG Effektivität</string>
+    <string name="statBezeichnungGehalten">Gehalten</string>
+    <string name="statBezeichnungWuerfe">Würfe</string>
+    <string name="statBezeichnungHalbzeit">Halbzeit</string>
+    <string name="statBezeichnungChancen">Chancen</string>
+    <string name="statBezeichnungEffektivitaet">Effektivität</string>
+    <string name="statBezeichnungTechFehler">Tech. Fehler</string>
+    <string name="statBezeichnungAngriffe">Angriffe</string>
+    <string name="statBezeichnungBallbesitz">Ballbesitz</string>
+    <string name="statBezeichnungZeitAngriff">Zeit / Angriff</string>
+    <string name="statBezeichnungSpielfilm">Spielfilm</string>
+    <string name="statBezeichnungMinuten">Minuten</string>
+    <string name="statBezeichnungFuehrung">Führung</string>
+    <string name="statBezeichnungUnentschieden">Unentschieden</string>
+    <string name="statBezeichnungStrafen">Strafen</string>
+    <string name="statBezeichnungGelbeKarten">Gelbe Karten</string>
+    <string name="statBezeichnungZweiMinuten">Zwei Minuten</string>
+    <string name="statBezeichnungZweiMalZwei">2x2 Minuten</string>
+    <string name="statBezeichnungRoteKarten">Rote Karten</string>
+    <string name="statBezeichnungUeberzahl">Überzahl</string>
+    <string name="statBezeichnungToreUeberzahl">Tore Überzahl</string>
+    <string name="statBezeichnungToreUnterzahl">Tore Unterzahl</string>
+    <string name="statBezeichnungName">Name</string>
+    <string name="statBezeichnungToreKurz">T</string>
+    <string name="statBezeichnungWuerfeKurz">W</string>
+    <string name="statBezeichnungEffektivitaetKurz">E</string>
+    <string name="statBezeichnungQuote">Quote</string>
+    <string name="statBezeichnungTechnischeFehler">Technische Fehler</string>
+    <string name="statBezeichnungGelbeKarte">Gelbe Karte</string>
+    <string name="statBezeichnungRoteKarte">Rote Karte</string>
+	<string name="mannschaftName">Mannschaftsname</string>
+    <string name="mannschaftKuerzel">Mannschaftskürzel</string>
+    <string name="mannschaftSpielerVerwalten">Spieler verwalten</string>
+    <string name="mannschaftSpielerImport">Spieler importieren</string>
+    <string name="spielerPositionTorwart">Torwart</string>
+    <string name="spielerPositionLinksaussen">Linksaußen</string>
+    <string name="spielerPositionRueckraumLinks">Rückraum links</string>
+    <string name="spielerPositionRueckraumMitte">Rückraum mitte</string>
+    <string name="spielerPositionRueckraumRechts">Rückraum rechts</string>
+    <string name="spielerPositionRechtsaussen">Rechtsaußen</string>
+    <string name="spielerPositionKreislaeufer">Kreisläufer</string>
+    <string name="spielerPositionTorwartKurz">TW</string>
+    <string name="spielerPositionLinksaussenKurz">LA</string>
+    <string name="spielerPositionRueckraumLinksKurz">RL</string>
+    <string name="spielerPositionRueckraumMitteKurz">RM</string>
+    <string name="spielerPositionRueckraumRechtsKurz">RR</string>
+    <string name="spielerPositionRechtsaussenKurz">RA</string>
+    <string name="spielerPositionKreislaeuferKurz">KL</string>
+    <string name="mannschaftMsgboxTitel">Löschen</string>
+	<string name="mannschaftMsgboxText">Möchtest Du die Mannschaft wirklich löschen?</string>
+	<string name="mannschaftDelMsgboxTitel">Löschen nicht möglich</string>
+	<string name="mannschaftDelMsgboxText">Es existiert noch mindestens ein Spiel, in dem diese Mannschaft noch aktiv ist. 
+	    								   Löschen ist daher nicht möglich. Lösche das / die betreffenden Spiel(e) und 
+	    								   versuche es erneut.</string>
+    <string name="teamEditInfoMsgboxTitel">Info</string>
+	<string name="teamEditInfoMsgboxText">Du kannst Spielerdaten über eine CSV-Tabelle importieren. Erstelle dazu eine Tabelle ohne 
+	    								  Überschrift. In die erste Spalte die Rückennummer, in die zweite Spalte den Spielernamen 
+	    								  und in die dritte Spalte die Position: TW für Torwart, LA für Linksaußen, RL für 
+	    								  Rückraum links, RM für Rückraum mitte, RR für Rückraum rechts, RA für Rechtsaußen, 
+	    								  KL für Kreisläufer. Speicher die Datei dann in dem Ordner sdcard/Download/ unter dem Namen Player.csv ab. 
+	    								  Eine Beispieldatei findest Du auf der Webseite www.fivestrikes.de 
+	    								  im Bereich Download. Gehe dann 
+	    								  in der App auf Spieler importieren um den Import durchzuführen.</string>
+	<string name="teamEditFertigMsgboxTitel">Import</string>
+	<string name="teamEditFertigMsgboxText">Der Import der Spielerdaten wurde erfolgreich durchgeführt.</string>
+	<string name="teamEditFehlerMsgboxTitel">Import</string>
+	<string name="teamEditFehlerMsgboxText">Der Import der Spielerdaten konnte nicht durchgeführt werden. Stelle sicher, dass die 
+	    									Datei Player.csv in dem Ordner sdcard/Download/ abgespeichert ist.</string>
+
+    <!-- Spiel starts -->   
+	<string name="spielTitel">Spiele</string>
+	<string name="spielEditTitel">Spiel editieren</string>
+	<string name="spielDatum">Datum</string>	
+	<string name="spielLaenge">Halbzeitlänge</string>
+	<string name="spielHeim">Heimmannschaft</string>
+	<string name="spielHeimTeam">Heim</string>
+	<string name="spielAusw">Auswärtsmannschaft</string>
+	<string name="spielAuswTeam">Auswärts</string>
+	<string name="spielTicker">Ticker aufrufen</string>
+	<string name="mannschaftAuswahl">Mannschaft wählen</string>
+	<string name="spielMsgboxTitel">Speichern nicht möglich</string>
+	<string name="spielMsgboxText">Es sind noch nicht alle Angaben gemacht. Speichern daher nicht möglich.</string>
+	<string name="tickerMsgboxTitel">Spielstart nicht möglich</string>
+	<string name="tickerMsgboxText">Es sind noch nicht alle Angaben gemacht. Der Start des Spiels ist daher nicht möglich.</string>
+	<string name="spielDelMsgboxTitel">Löschen</string>
+	<string name="spielDelMsgboxText">Möchtest Du das Spiel wirklich löschen?</string>
+	<string name="spielTeamauswahlMsgboxTitel">Auswahl nicht möglich</string>
+	<string name="spielTeamauswahlMsgboxText">Bei diesem Spiel wurden bereits Aktionen eingegeben. 
+	    									  Eine Änderung der Mannschaften ist daher nicht mehr möglich.
+	    									  Um die Mannschaft ändern zu können müssen alle Aktionen im Ticker 
+	    									  gelöscht werden.</string>
+	<string name="spielGegnerauswahlMsgboxText">Auswahl nicht möglich. Du hast diese Mannschaft schon für den 
+	    										Gegner ausgewählt</string>
+    <!-- Spiel ends -->  
+</resources>

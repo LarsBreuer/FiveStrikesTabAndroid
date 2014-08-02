@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="72dp"
+  android:orientation="vertical"
+  android:background="@color/backgroundcolor"
+  >
+
+	<TextView android:id="@+id/rowSpielDatum"
+      android:layout_width="fill_parent"
+      android:layout_height="24dip"
+      android:gravity="bottom|left"
+      android:textStyle="bold"
+      android:textColor="@color/standardfarbe"
+      android:maxLines="1"
+      android:ellipsize="start"
+      android:layout_marginLeft="20dip"
+      android:textSize="18dip"
+    />
+    	 
+    <TextView android:id="@+id/rowSpielTeam"
+      	android:layout_width="fill_parent"
+      	android:layout_height="48dip"
+      	android:gravity="top|left"
+      	android:textStyle="bold"
+      	android:textColor="@color/standardfarbe"
+      	android:maxLines="1"
+      	android:ellipsize="end"
+      	android:layout_marginLeft="20dip"
+      	android:textSize="24dip"
+    />
+
+</LinearLayout>

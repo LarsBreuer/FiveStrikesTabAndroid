@@ -1,0 +1,39 @@
+<resources>
+    <style name="MyCustomTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/MyActionBarTheme</item>
+    </style>
+
+    <style name="MyActionBarTheme" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/action_bar_bg</item>
+        <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+    </style>
+    
+    <style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance">
+    	<item name="android:textColor">@color/hellblau</item>
+    	<item name="android:textSize">24sp</item>
+    	<item name="android:textStyle">bold</item>
+  	</style>
+</resources>
+
+<!--
+<resources>
+
+
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+    </style>
+
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        All customizations that are NOT specific to a particular API-level can go here. 
+    </style>
+
+</resources>
+-->

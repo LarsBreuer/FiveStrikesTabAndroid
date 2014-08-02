@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+    <fragment android:name="de.fivestrikes.tab.FragTickerStat"   
+			  android:id="@+id/frag_ticker_stat"
+			  android:layout_weight="1"
+			  android:layout_width="0px"
+			  android:layout_height="match_parent" />
+	
+	<fragment android:name="de.fivestrikes.tab.FragTickerAction"  
+			  android:id="@+id/frag_ticker_action"
+			  android:layout_weight="1"
+			  android:layout_width="0px"
+			  android:layout_height="match_parent" />
+	
+	<fragment android:name="de.fivestrikes.tab.FragEmpty"  
+			  android:id="@+id/frag_ticker_player"
+			  android:layout_weight="1"
+			  android:layout_width="0px"
+			  android:layout_height="match_parent" />
+    
+</LinearLayout>
