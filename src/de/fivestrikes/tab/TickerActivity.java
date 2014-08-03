@@ -18,7 +18,7 @@ public class TickerActivity extends FragmentActivity {
 	SQLHelper helper=null;
 	String spielId=null;
 	String lastID=null;
-	FragTickerStat fragTickerStat;
+	FragTickerList fragTickerlist;
 	//FragTickerAction fragTickerAction;
 	
 	@Override
@@ -42,20 +42,20 @@ public class TickerActivity extends FragmentActivity {
 /* Fragments einrichten */
 	
 		
-        if (findViewById(R.id.frag_ticker_stat) != null) {
+        if (findViewById(R.id.frag_ticker_list) != null) {
 
             if (savedInstanceState != null) {
                 return;
             }
             
-            FragTickerStat firstFragment = new FragTickerStat();
+            FragTickerList firstFragment = new FragTickerList();
             
             Bundle args = new Bundle();
             args.putString("GameID", spielId);
             firstFragment.setArguments(args);
             
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.frag_ticker_stat, firstFragment).commit();
+                    .add(R.id.frag_ticker_list, firstFragment).commit();
         }
         
         if (findViewById(R.id.frag_ticker_action) != null) {

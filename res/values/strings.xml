@@ -16,6 +16,10 @@
 	<string name="player">Spieler</string>
 	<string name="teams">Mannschaften</string>
 	<string name="game">Spiel</string>
+	<string name="anwurfMsgboxTitel">Anwurf</string>
+	<string name="anwurfMsgboxText">Bitte wähle aus, welche Mannschaft Anwurf hat.</string>
+	<string name="anwurfHeim">Heim</string>
+	<string name="anwurfAusw">Auswärts</string>
 	
 	<string name="spielerName">Spielername</string>
 	<string name="spielerNummer">Rückennummer</string>
@@ -137,4 +141,91 @@
 	<string name="spielGegnerauswahlMsgboxText">Auswahl nicht möglich. Du hast diese Mannschaft schon für den 
 	    										Gegner ausgewählt</string>
     <!-- Spiel ends -->  
+    
+    <!-- Ticker starts -->   
+	<string name="tickerTitel">Ticker</string>
+	<string name="tickerAktionTitel">Aktion</string>
+	<string name="tickerSpielerTitel">Spieler</string>
+	<!-- Hinweis: Doppelte Bezeichnungwn wie 'Fehlwurf' nur einmal verwenden -->  
+	<string name="tickerMSGBoxAktionTitel">Ballverlust</string>
+	<string name="tickerMSGBoxAktionNachricht">Führte die Aktion zu einem Ballverlust?</string>
+	<string name="tickerMSGBoxJa">Ja</string>
+	<string name="tickerMSGBoxNein">Nein</string>
+	<string name="tickerMSGBoxSpielzeit">Spielzeit:</string>
+	<string name="tickerMSGBoxEinstellen">Einstellen</string>
+	<string name="tickerDelMsgboxTitel">Löschen</string>
+	<string name="tickerDelMsgboxText">Möchtest Du die Tickermeldung wirklich löschen?</string>
+	<string name="tickerAktionTor">Tor</string> 
+	<string name="tickerAktionFehlwurf">Fehlwurf</string> 
+	<string name="tickerAktionTechnischerFehler">Technischer Fehler</string>
+	<string name="tickerAktion7mTor">7m Tor</string>
+	<string name="tickerAktion7mFehlwurf">7m Fehlwurf</string>
+	<string name="tickerAktionTempogegenstossTor">TG Tor</string>
+	<string name="tickerAktionTempogegenstossFehlwurf">TG Fehlwurf</string>
+	<string name="tickerAktionWechsel">Wechsel</string>
+	<string name="tickerAktionEinwechselung">Einwechselung</string>
+	<string name="tickerAktionAuswechselung">Auswechselung</string>
+	<string name="tickerAktionStartaufstellung">Startaufstellung</string>
+	<string name="tickerAktionStartaufstellung2Halbzeit">Startaufstellung 2. Halbzeit</string>
+	<string name="tickerAktionZweiMinuten">Zwei Minuten</string>
+	<string name="tickerAktionGelbeKarte">Gelbe Karte</string>
+	<string name="tickerAktionZweiMalZwei">2x2 Minuten</string>
+	<string name="tickerAktionRoteKarte">Rote Karte</string> 
+	<string name="tickerAktionAuszeit">Auszeit</string> 
+	<string name="tickerAktionZurueck">zurueck</string> 
+	<string name="tickerInfoMsgboxTitel">Info</string>
+	<string name="tickerInfoMsgboxText">Button Mannschaftskürzel =>\nWechsel Ballbesitz.\nButton Spielergebnis =>\nNeue Aktion eingeben.\nUhr =>\nKurzer Klick: Start und Stopp / 2 Sekunden drücken: Uhr stellen.\nTickerfelder =>\nAktion editieren.</string>
+	<string name="tickerAktionWurfecke">Wurfecke</string>
+	<string name="tickerAktionWurfposition">Wurfposition</string>
+	<string name="tickerAktionTorwartGegentor">Torwart Gegentor</string>
+	<string name="tickerAktionTorwart7mGegentor">7m Gegentor</string>
+	<string name="tickerAktionTorwartTGGegentor">TG Gegentor</string>
+	<string name="tickerAktionTorwartGehalten">Torwart gehalten</string>
+	<string name="tickerAktionTorwart7mGehalten">7m gehalten</string>
+	<string name="tickerAktionTorwartTGGehalten">TG gehalten</string>
+	<string name="tickerAktionBallverlust">Ballverlust?</string>
+	<string name="tickerEditTitel">Ticker editieren</string> 
+	<string name="tickerEditSpielzeit">Spielzeit</string>
+	<string name="tickerEditAktion">Aktion</string> 
+	<string name="tickerEditSpieler">Spieler</string> 
+	<string name="tickerEditMsgboxTitel">Ändern nicht möglich</string>
+	<string name="tickerEditMsgboxText">Das Ändern des Ballbesitzes ist nicht möglich. 
+	    								Bei der Aktion Ballbesitz sind folgende Änderungen 
+	    								möglich: Einstellung der Spielzeit und löschen.</string>
+	<string name="tickerEditWurfeckeMsgboxTitel">Ändern nicht möglich</string>
+	<string name="tickerEditWurfeckeMsgboxText">Das Ändern der Wurfeccke ist bei dieser Aktion nicht möglich.</string>
+	<string name="tickerEditWurfpositionWaehlen">Wurfposition wählen</string>
+	<string name="wurfeckeOOLL">Oben links daneben</string>
+	<string name="wurfeckeOOL">Oben links daneben</string>
+	<string name="wurfeckeOOM">Oben mitte daneben</string>
+	<string name="wurfeckeOOR">Oben rechts daneben</string>
+	<string name="wurfeckeOORR">Oben rechts daneben</string>
+	<string name="wurfeckeOLL">Oben links daneben</string>
+	<string name="wurfeckeOL">Oben links</string>
+	<string name="wurfeckeOM">Oben links mitte</string>
+	<string name="wurfeckeOR">Oben rechts</string>
+	<string name="wurfeckeORR">Oben rechts daneben</string>
+	<string name="wurfeckeMLL">Mitte links daneben</string>
+	<string name="wurfeckeML">Mitte links</string>
+	<string name="wurfeckeMM">Mitte mitte</string>
+	<string name="wurfeckeMR">Mitte rechts</string>
+	<string name="wurfeckeMRR">Mitte rechts daneben</string>
+	<string name="wurfeckeULL">Unten links daneben</string>
+	<string name="wurfeckeUL">Unten links</string>
+	<string name="wurfeckeUM">Unten mitte</string>
+	<string name="wurfeckeUR">Unten rechts</string>
+	<string name="wurfeckeURR">Unten rechts daneben</string> 
+	<string name="wurfpositionLA">Links außen</string> 
+	<string name="wurfpositionRHL">Rückraum halb links</string> 
+	<string name="wurfpositionHL">Halb links</string>
+	<string name="wurfpositionRA">Rechts außen</string> 
+	<string name="wurfpositionRHR">Rückraum halb rechts</string> 
+	<string name="wurfpositionHR">Halb rechts</string> 	
+	<string name="wurfpositionM">Mitte</string> 					
+	<!-- Ticker ends --> 
+    
+    <string name="aktionen">Aktionen</string>
+	<string name="ticker">Ticker</string>
+	<string name="statistik">Statistik</string>
+	
 </resources>
