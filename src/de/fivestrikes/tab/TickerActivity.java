@@ -27,6 +27,7 @@ public class TickerActivity extends FragmentActivity {
 		
 		setContentView(R.layout.ticker);
 		spielId=getIntent().getStringExtra("GameID");
+		Log.v("TickerActivity GameId", spielId);
 		
 /* Datenbank laden */
         
@@ -64,18 +65,17 @@ public class TickerActivity extends FragmentActivity {
                 return;
             }
 
-            // Create a new Fragment to be placed in the activity layout
-//            FragTickerAction secondFragment = new FragTickerAction();
+            FragTickerAction secondFragment = new FragTickerAction();
             
-            // In case this activity was started with special instructions from an
-            // Intent, pass the Intent's extras to the fragment as arguments
-//            secondFragment.setArguments(getIntent().getExtras());
+            Bundle args = new Bundle();
+            args.putString("GameID", spielId);
+            secondFragment.setArguments(args);
             
             // Add the fragment to the 'fragment_container' FrameLayout
-//            getSupportFragmentManager().beginTransaction().add(R.id.frag_ticker_action, secondFragment).commit();
+            getSupportFragmentManager().beginTransaction().add(R.id.frag_ticker_action, secondFragment).commit();
         }
         
-        if (findViewById(R.id.frag_ticker_action) != null) {
+        if (findViewById(R.id.frag_ticker_player) != null) {
 
             if (savedInstanceState != null) {
                 return;
@@ -90,7 +90,7 @@ public class TickerActivity extends FragmentActivity {
             
             // Add the fragment to the 'fragment_container' FrameLayout
             getSupportFragmentManager().beginTransaction()
-            		.add(R.id.frag_ticker_action, thirdFragment).commit();
+            		.add(R.id.frag_ticker_player, thirdFragment).commit();
         }
 
 	}

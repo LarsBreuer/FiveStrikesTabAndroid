@@ -46,12 +46,15 @@ public class FragTickerList extends ListFragment {
 	private long startTime;
 	private final int REFRESH_RATE = 100;
 	private boolean stopped = false;
-	String teamKurz=null;
-	final Context context = getActivity();
+	String teamHomeShort=null;
+	String teamAwayShort=null;
+	//final Context context = getActivity();
 	Cursor c=null;
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        
+/* Grundlayout setzen */
 		
 		view = inflater.inflate(R.layout.frag_ticker_list, container, false);
 		
@@ -62,7 +65,7 @@ public class FragTickerList extends ListFragment {
 			gameId = args.getString("GameID");
 		} 
 		
-		/* Datenbank laden */
+/* Datenbank laden */
 	       
         helper=new SQLHelper(getActivity());
         refreshContent();
@@ -87,7 +90,8 @@ public class FragTickerList extends ListFragment {
 
 /* Daten aus Datenbank laden */
         
-		teamKurz=helper.getTeamHeimKurzBySpielID(gameId);
+		teamHomeShort=helper.getTeamHeimKurzBySpielID(gameId);
+		teamAwayShort=helper.getTeamHeimKurzBySpielID(gameId);
 		strBallbesitz=helper.getSpielBallbesitz(gameId);
 		
 /* Zeit stellen */
@@ -135,22 +139,22 @@ public class FragTickerList extends ListFragment {
         
         btnTeamHeim.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
-                Button btnTeamHeim=(Button) view.findViewById(R.id.btn_heim);
+            	Log.v("Heim-Button", strBallbesitz);
+            	Button btnTeamHeim=(Button) view.findViewById(R.id.btn_heim);
                 Button btnTeamAusw=(Button) view.findViewById(R.id.btn_auswaerts);
                 Resources res = getResources(); 
         		if (Integer.parseInt(strBallbesitz)!=1){
         			btnTeamHeim.setBackgroundResource(R.drawable.button_team_blue_active);
         			btnTeamAusw.setBackgroundResource(R.drawable.button_team_red_inactive);
-        			String strBallbesitzText="Ballbesitz " + teamKurz;
+        			String strBallbesitzText="Ballbesitz " + teamHomeShort;
         			realzeit = DateFormat.getDateTimeInstance().format(new Date());
         			helper.insertTicker(0, strBallbesitzText, 1, "", 0, Integer.parseInt(gameId), (int) (long) elapsedTime, realzeit);
         			helper.updateSpielBallbesitz(gameId, 1);  // aktuellen Ballbesitz in Spiel eintragen
 					strBallbesitz="1";
+	        		refreshContent();
         		}
-
-        		refreshContent();
         		
             }
         });
@@ -159,24 +163,35 @@ public class FragTickerList extends ListFragment {
         
         btnTeamAusw.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
+            public void onClick(View v) {
+            	
+            	Log.v("Auswärts-Button", strBallbesitz);
                 Button btnTeamHeim=(Button) view.findViewById(R.id.btn_heim);
                 Button btnTeamAusw=(Button) view.findViewById(R.id.btn_auswaerts);
                 Resources res = getResources(); 
         		if (Integer.parseInt(strBallbesitz)!=0){
         			btnTeamHeim.setBackgroundResource(R.drawable.button_team_blue_inactive);
         			btnTeamAusw.setBackgroundResource(R.drawable.button_team_red_active);
-    				String strBallbesitzText="Ballbesitz " + teamKurz;
+    				String strBallbesitzText="Ballbesitz " + teamAwayShort;
     				realzeit = DateFormat.getDateTimeInstance().format(new Date());
     				helper.insertTicker(1, strBallbesitzText, 0, "", 0, Integer.parseInt(gameId), (int) (long) elapsedTime, realzeit);
     				helper.updateSpielBallbesitz(gameId, 0);  // aktuellen Ballbesitz in Spiel eintragen
 					strBallbesitz="0";
-
 					refreshContent();
-					
         		}				
             }
+        });
+        
+/* Stoppuhr einrichten */
+
+        btn_uhr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            	
+            	uhrStartStopp();
+            	
+            }
+            
         });
         
 /* Uhr stellen */
@@ -185,6 +200,7 @@ public class FragTickerList extends ListFragment {
             @Override
             public boolean onLongClick(View v) {
 				// Stopuhr stoppen 
+            	Context context = getActivity();
         		startTime = System.currentTimeMillis();
             	mHandler.removeCallbacks(startTimer);
             	stopped = true;
@@ -342,13 +358,29 @@ public class FragTickerList extends ListFragment {
 	}
 	
     public void refreshContent() {
-
-        if(helper.getAllTicker(gameId)!=null){
-        	model=helper.getAllTicker(gameId);
-        	getActivity().startManagingCursor(model);
-        	adapter=new TickerAdapter(model);
-        	setListAdapter(adapter); 
-        }
+    	
+        model=helper.getAllTicker(gameId);
+        getActivity().startManagingCursor(model);
+        adapter=new TickerAdapter(model);
+        setListAdapter(adapter); 
+        
+        Button btnTeamHeim=(Button) view.findViewById(R.id.btn_heim);
+		Button btnTeamAusw=(Button) view.findViewById(R.id.btn_auswaerts);
+        strBallbesitz=helper.getSpielBallbesitz(gameId);
+		switch(Integer.parseInt(strBallbesitz)){
+			case 1:
+				btnTeamHeim.setBackgroundResource(R.drawable.button_team_blue_active);
+		    	btnTeamAusw.setBackgroundResource(R.drawable.button_team_red_inactive);
+				break;
+			case 0:
+		    	btnTeamAusw.setBackgroundResource(R.drawable.button_team_red_active);
+		    	btnTeamHeim.setBackgroundResource(R.drawable.button_team_blue_inactive);
+		    	break;
+			case 2:
+		    	btnTeamHeim.setBackgroundResource(R.drawable.button_team_blue_inactive);
+		    	btnTeamAusw.setBackgroundResource(R.drawable.button_team_red_inactive);
+		    	break;
+		}
     	 
     }
 	
@@ -371,10 +403,6 @@ public class FragTickerList extends ListFragment {
  * Stoppuhr einrichten
  *
  */
-	
-    public void uhrClick (View view){
-    	uhrStartStopp();
-    }
 	
     public void uhrStartStopp() {
     	Log.v("TickerActivity", "uhrStartStopp");
@@ -484,7 +512,17 @@ public class FragTickerList extends ListFragment {
 	public void onListItemClick(ListView list, View view,
             int position, long id) {
 		
-		// Ticker Edit aufrufen
+		Bundle args = new Bundle();
+		args.putString("TickerID", String.valueOf(id));
+		args.putString("GameID", gameId);
+		FragmentManager fragmentManager = getFragmentManager();
+		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        FragTickerEdit fragment = new FragTickerEdit();
+        FragEmpty fragment2 = new FragEmpty();
+        fragment.setArguments(args);
+        fragmentTransaction.replace(R.id.frag_ticker_action, fragment);
+        fragmentTransaction.replace(R.id.frag_ticker_player, fragment2);
+        fragmentTransaction.commit();
 		
 	}
 

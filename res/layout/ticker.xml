@@ -2,9 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="horizontal" >
     
-    <fragment android:name="de.fivestrikes.tab.FragTickerList"   
+    <fragment android:name="de.fivestrikes.tab.FragEmpty"   
 			  android:id="@+id/frag_ticker_list"
 			  android:layout_weight="1"
 			  android:layout_width="0px"

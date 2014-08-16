@@ -227,5 +227,8 @@
     <string name="aktionen">Aktionen</string>
 	<string name="ticker">Ticker</string>
 	<string name="statistik">Statistik</string>
+	<string name="tickerWarnmeldungTorwartEinsatz">Kein Gegnertorwart eingesetzt. Torwartaktionen werden nur erfasst bei eingewechseltem Torwart.</string>
+	<string name="ja">Ja</string>
+	<string name="nein">Nein</string>
 	
 </resources>

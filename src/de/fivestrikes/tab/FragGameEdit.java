@@ -191,6 +191,7 @@ public class FragGameEdit extends Fragment {
         				helper.updateTickerSpieler(gameId);	// Spielernamen in Tickermeldungen schreiben
         				
             			Intent i = new Intent(getActivity().getApplicationContext(), TickerActivity.class);
+            			Log.v("FragGameEdit GameId 1", gameId);
         				i.putExtra("GameID", gameId);
         				startActivity(i);
 
@@ -204,6 +205,8 @@ public class FragGameEdit extends Fragment {
         	    					   	   auswID);
             			
             			Intent i = new Intent(getActivity().getApplicationContext(), TickerActivity.class);
+            			gameId = helper.getLastSpielId();
+            			Log.v("FragGameEdit GameId 2", gameId);
         				i.putExtra("GameID", gameId);
         				startActivity(i);
             			
@@ -544,8 +547,7 @@ public class FragGameEdit extends Fragment {
 				}
 			})
 			.show();
-			
-			
+					
 		}
 	};
 }
